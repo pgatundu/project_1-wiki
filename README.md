@@ -16,7 +16,7 @@ Welcome to the Wiki Encyclopedia Web Application! This project is a simple web a
 
 1. Clone this repository:
    ```
-   git clone <repository-url>
+   git clone <https://github.com/pgatundu/project_1-wiki>
    ```
 2. Navigate to the project directory:
    ```
@@ -58,3 +58,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 - This project was inspired by the Django web framework's built-in admin interface.
 - Special thanks to the Flask and Markdown2 communities for their excellent documentation and resources.
+- It was alsopart of my assignments on cs50 Web Programming with Python and JavaScript
