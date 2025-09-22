@@ -1,15 +1,46 @@
-# Wiki Encyclopedia Web Application
+# Wiki
+# Django-Based Encyclopedia
 
-Welcome to the Wiki Encyclopedia Web Application! This project is a simple web application built using Flask, a Python web framework, that serves as a wiki encyclopedia. It allows users to create, read, edit, and search for encyclopedia entries using Markdown syntax.
+## Overview
+
+This project is a simple **Wikipedia-style encyclopedia** built with Django.  
+Users can browse entries, search for pages, create new entries using Markdown, edit existing ones, and view random articles.  
+It was developed as part of Harvard’s **CS50W Web Programming with Python and JavaScript** course.
 
 ## Features
 
-- **Entry Page**: Users can visit `/wiki/TITLE` to view the content of a specific encyclopedia entry. If the entry does not exist, an error page is displayed.
-- **Index Page**: The index page lists all encyclopedia entries, with each entry name linked to its corresponding page.
-- **Search**: Users can search for entries by typing a query into the search box. If the query matches an entry, the user is redirected to that entry's page. Otherwise, a search results page is displayed.
-- **New Page**: Users can create a new encyclopedia entry by clicking "Create New Page" in the sidebar. They can enter a title and Markdown content, and upon saving, the entry is added to the encyclopedia.
-- **Edit Page**: Each entry page has an "Edit" link that allows users to edit the Markdown content. Changes can be saved, and the user is redirected back to the entry page.
-- **Random Page**: Clicking "Random Page" in the sidebar takes the user to a random encyclopedia entry.
-- **Markdown to HTML Conversion**: Markdown content is converted to HTML before being displayed to the user, supporting headings, boldface text, unordered lists, links, and paragraphs.
+- **Search**: Look up encyclopedia entries by title or partial match.
+- **Create New Entry**: Add new pages using Markdown formatting.
+- **Edit Entries**: Update existing pages through a Markdown editor.
+- **Random Page**: View a random entry at the click of a button.
+- **Markdown Rendering**: Content is stored in Markdown and converted to HTML for display.
 
-This is part of my assignment for cs50 Web Programming with Python and JavaScript
+## File Descriptions
+
+- **encyclopedia/views.py**: Core logic for handling entries, search, create, edit, and random page.
+- **encyclopedia/urls.py**: URL routing for all app views.
+- **encyclopedia/templates/**:  
+  - `index.html`: Displays all entries.  
+  - `entry.html`: Shows a single entry (Markdown rendered).  
+  - `create.html`: Form for creating new entries.  
+  - `edit.html`: Form for editing existing entries.  
+  - `search.html`: Displays search results.  
+- **util.py**: Helper functions for reading/writing entries in Markdown.
+
+## Setup
+
+To run this project locally, follow these steps:
+
+```bash
+# Clone the repository
+git clone https://github.com/pgatundu/project_1-wiki.git
+cd project_1-wiki
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Apply migrations
+python manage.py migrate
+
+# Run the server
+python manage.py runserver
